@@ -1,4 +1,4 @@
-import { setImage } from "../pages/api/apiconfig";
+import { setImage } from "../../pages/api/apiconfig";
 
 const Seasons = ({ season }) => {
   return (

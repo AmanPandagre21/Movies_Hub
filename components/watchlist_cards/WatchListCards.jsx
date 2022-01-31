@@ -1,5 +1,5 @@
-import MovieCards from "./watchlist_cards/MovieCards";
-import TVCards from "./watchlist_cards/TVCards";
+import MovieCards from "./MovieCards";
+import TVCards from "./TVCards";
 
 const WatchListCards = ({ movies, flag, type }) => {
   return (

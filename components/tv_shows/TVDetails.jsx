@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import CastandCrew from "./CastandCrew";
-import { setImage, setYTLink } from "../pages/api/apiconfig";
+import { useRouter } from "next/router";
+import CastandCrew from "../movies/CastandCrew";
+import { setImage, setYTLink } from "../../pages/api/apiconfig";
 
 const TVDetails = ({ details, cast, trailer }) => {
   const [trail, setTrailer] = useState([]);
-
+  const router = useRouter();
   // useEffect(() => {
   //   setTrailer((prev) => {
   //     return trailer.filter((fil) => fil.type === "Trailer");
@@ -104,8 +105,24 @@ const TVDetails = ({ details, cast, trailer }) => {
             </div>
           </div>
         </div>
-      )) ||
-        "NO DATA FOUND"}
+      )) || (
+        <div className="flex flex-col justify-center items-center ">
+          <h1 className="text-white md:text-5xl text-2xl uppercase tracking-wider">
+            Result not found
+          </h1>
+          <div className="mx-auto">
+            <button
+              type="button"
+              className="w-52 h-12 hover:bg-green-500 hover:text-white text-xl rounded border-2  hover:border-green-800 bg-green-800 border-white my-7  uppercase"
+              onClick={() => {
+                router.push("/tv");
+              }}
+            >
+              Back to Tv Shows
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };

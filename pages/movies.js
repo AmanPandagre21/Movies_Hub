@@ -86,7 +86,7 @@ const movies = ({ data }) => {
   return (
     <>
       <Header />
-      <h1 className="uppercase text-green-300 tracking-widest">M</h1>
+      <h1 className="uppercase text-green-300 tracking-widest"></h1>
       <div className="flex justify-center my-5">
         <form className="search" onSubmit={handleOnSubmitSearch}>
           <input

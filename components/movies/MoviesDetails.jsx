@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import millify from "millify";
 import CastandCrew from "./CastandCrew";
-import { setImage, setYTLink } from "../pages/api/apiconfig";
+import { setImage, setYTLink } from "../../pages/api/apiconfig";
 
 const MoviesDetails = ({ details, cast, trailer }) => {
+  const router = useRouter();
   const [trail, setTrailer] = useState([]);
   const [yt, setYT] = useState({});
 
@@ -117,8 +119,24 @@ const MoviesDetails = ({ details, cast, trailer }) => {
             </div>
           </div>
         </div>
-      )) ||
-        "NO DATA FOUND"}
+      )) || (
+        <div className="flex flex-col justify-center items-center ">
+          <h1 className="text-white md:text-5xl text-2xl uppercase tracking-wider">
+            Result not found
+          </h1>
+          <div className="mx-auto">
+            <button
+              type="button"
+              className="w-52 h-12 hover:bg-green-500 hover:text-white text-xl rounded border-2  hover:border-green-800 bg-green-800 border-white my-7  uppercase"
+              onClick={() => {
+                router.push("/movies");
+              }}
+            >
+              Back to movies
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };

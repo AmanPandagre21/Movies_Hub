@@ -3,7 +3,7 @@ import { setImage, detailsApis } from "../../pages/api/apiconfig";
 import Header from "../../components/Header";
 import BottomNav from "../../components/BottomNav";
 import CardsSlider from "../../components/CardsSlider";
-import MoviesDetails from "../../components/MoviesDetails";
+import MoviesDetails from "../../components/movies/MoviesDetails";
 
 export async function getServerSideProps(params) {
   const { id } = params.query;

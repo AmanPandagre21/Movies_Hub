@@ -1,6 +1,6 @@
 import React from "react";
-import ThumbnailCard from "./ThumbnailCard";
-import ThumbnailTvCard from "./ThumbnailTvCard";
+import ThumbnailCard from "./thumbnail_cards/ThumbnailCard";
+import ThumbnailTvCard from "./thumbnail_cards/ThumbnailTvCard";
 
 const CardsSlider = ({ movie, title, flag }) => {
   return (

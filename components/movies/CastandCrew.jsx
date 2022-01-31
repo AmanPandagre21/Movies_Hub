@@ -1,4 +1,4 @@
-import { setImage } from "../pages/api/apiconfig.js";
+import { setImage } from "../../pages/api/apiconfig.js";
 
 const CastandCrew = ({ cast }) => {
   return (
