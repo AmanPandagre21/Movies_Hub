@@ -19,6 +19,7 @@ const watched = () => {
             watchedMovieList.map((e) => {
               return (
                 <WatchListCards
+                  key={e.id}
                   movies={e}
                   flag="watched"
                   type={e.name === undefined ? "movie" : "tv"}

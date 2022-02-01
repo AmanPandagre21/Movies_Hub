@@ -21,7 +21,7 @@ const MovieCards = ({ flag, movies }) => {
             <div className="relative">
               <a onClick={() => router.push(`/movies/${movies.id}`)}>
                 <Image
-                  className="rounded-lg w-10/12 "
+                  className="rounded-lg w-10/12 cursor-pointer"
                   src={
                     movies.poster_path !== ""
                       ? setImage.width500Image(movies.poster_path)
@@ -62,7 +62,7 @@ const MovieCards = ({ flag, movies }) => {
             <div className="relative">
               <a onClick={() => router.push(`/movies/${movies.id}`)}>
                 <Image
-                  className="rounded-lg w-10/12 "
+                  className="rounded-lg w-10/12 cursor-pointer"
                   src={
                     movies.poster_path !== ""
                       ? setImage.width500Image(movies.poster_path)

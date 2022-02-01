@@ -51,7 +51,7 @@ const movieId = ({ details, cast, similar, video }) => {
       <Header />
       {/* background Image  */}
       <div className="relative">
-        <div className="bg-black opacity-20">
+        <div className="bg-black md:opacity-20">
           <img
             src={
               details
