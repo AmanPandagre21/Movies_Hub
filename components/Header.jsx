@@ -24,6 +24,9 @@ const Header = () => {
           <div className="hidden md:inline-flex md:items-center">
             <ul className="flex text-green-600 uppercase font-semibold">
               <li className="px-2 text-md hover:border-b-2 border-red-600 cursor-pointer">
+                <Link href="/">Home</Link>
+              </li>
+              <li className="px-2 text-md hover:border-b-2 border-red-600 cursor-pointer">
                 <Link href="/movies">Movies</Link>
               </li>
               <li className="px-2 text-md hover:border-b-2 border-red-600 cursor-pointer">

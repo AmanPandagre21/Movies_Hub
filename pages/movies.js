@@ -87,22 +87,22 @@ const movies = ({ data }) => {
     <>
       <Header />
       <h1 className="uppercase text-green-300 tracking-widest"></h1>
-      <div className="flex justify-center my-5">
+      <div className="flex justify-center mt-5 mb-0 md:my-5">
         <form className="search" onSubmit={handleOnSubmitSearch}>
           <input
             name="query"
             type="search"
-            className="w-80 h-9 rounded bg-green-800 outline-0 capitalize px-3"
+            className="w-52 md:w-80 h-9 rounded bg-green-800 outline-0 capitalize px-3"
             placeholder="search Here..."
           />
-          <button className="w-24 h-9 bg-transparent rounded border-2 border-green-800 mx-1 hover:bg-green-800 hover:border-white">
+          <button className="w-20 md:w-24 h-9 bg-transparent rounded border-2 border-green-800 mx-1 hover:bg-green-800 hover:border-white">
             Search
           </button>
         </form>
       </div>
 
       <CardsGrid movie={discovermovies} title="movies" flag="movie" />
-      <div className="flex justify-center items-center mb-9 md:mb-9 mt-0 sm:mb-16">
+      <div className="flex justify-center items-center mb-12 md:mb-9 mt-0 sm:mb-16">
         {flag ? (
           ""
         ) : (

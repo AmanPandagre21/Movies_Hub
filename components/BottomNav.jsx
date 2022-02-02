@@ -11,6 +11,9 @@ import {
 const BottomNav = () => {
   return (
     <>
+      <div className="md:bg-black md:w-full bottom-0 p-3">
+        <h1 className="text-center text-lg uppercase"> MAde with ❤ By Aman </h1>
+      </div>
       <nav className="md:hidden fixed bottom-0 inset-x-0 h-14 bg-black flex justify-between">
         <Link href="/">
           <a className="w-full block py-2 px-3 text-center hover:animate-pulse">
@@ -46,7 +49,7 @@ const BottomNav = () => {
           >
             <EyeIcon className="h-6 w-6 mx-auto text-green-400"></EyeIcon>
             <span className="text-xs uppercase text-white font-semibold">
-              Watch List
+              WatchList
             </span>
           </a>
         </Link>

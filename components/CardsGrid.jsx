@@ -13,7 +13,7 @@ const CardsGrid = ({ movie, title, flag }) => {
 
   return (
     <>
-      <div className="mx-12 my-14">
+      <div className="mx-12 my-8 md:my-14">
         <div className="flex justify-center items-center space-x-4 flex-wrap ">
           {flag2 ? (
             movie &&

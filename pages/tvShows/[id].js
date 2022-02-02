@@ -52,11 +52,13 @@ const movieId = ({ details, cast, similar, video }) => {
       <Header />
       {/* background Image  */}
       <div className="relative">
-        <div className="bg-black opacity-20">
+        <div className="md:bg-black md:opacity-20">
           <img
             src={
               details
-                ? setImage.originalImage(details.backdrop_path)
+                ? details.backdrop_path === null
+                  ? "/gallary.jpg"
+                  : setImage.originalImage(details.backdrop_path)
                 : "/gallary.jpg"
             }
             className="w-full max-h-screen"
@@ -68,11 +70,16 @@ const movieId = ({ details, cast, similar, video }) => {
         <TVDetails details={details} cast={cast} trailer={video} />
       </div>
 
-      <div className="grid grid-cols-1">
-        {details &&
-          details.seasons.map((ele) => {
-            return <Seasons key={ele.id} season={ele} />;
-          })}
+      <div className="my-3 md:my-0 mx-8 md:p-8 md:mx-0 md:bg-black">
+        <h1 className="w-40 px-4 py-2 border-4 border-green-500  rounded-full my-6 text-xl uppercase font-bold">
+          Seasons
+        </h1>
+        <div className="md:grid md:grid-cols-2">
+          {details &&
+            details.seasons.map((ele) => {
+              return <Seasons key={ele.id} season={ele} />;
+            })}
+        </div>
       </div>
 
       <CardsSlider movie={similar} title="Similar Tv SHows" flag="tv" />

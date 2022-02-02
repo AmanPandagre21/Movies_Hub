@@ -89,11 +89,11 @@ const tv = ({ data }) => {
           <input
             name="query"
             type="search"
-            className="w-80 h-9 rounded bg-green-800 outline-0 capitalize px-3"
+            className="w-52 md:w-80 h-9 rounded bg-green-800 outline-0 capitalize px-3"
             autoComplete="off"
             placeholder="search Here..."
           />
-          <button className="w-24 h-9 bg-transparent rounded border-2 border-green-800 mx-1 hover:bg-green-800 hover:border-white">
+          <button className="w-20 md:w-24 h-9 bg-transparent rounded border-2 border-green-800 mx-1 hover:bg-green-800 hover:border-white">
             Search
           </button>
         </form>
@@ -101,7 +101,7 @@ const tv = ({ data }) => {
 
       <CardsGrid movie={discovermovies} title="movies" flag="tv" />
 
-      <div className="flex justify-center items-center mb-9 md:mb-9 mt-0 sm:mb-16">
+      <div className="flex justify-center items-center mb-12 md:mb-9 mt-0 sm:mb-16">
         {flag ? (
           ""
         ) : (

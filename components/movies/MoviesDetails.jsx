@@ -131,14 +131,13 @@ const MoviesDetails = ({ details, cast, trailer }) => {
                     </h1>
                   </div>
                 </div>
-                {/* trailer section */}
               </div>
             </div>
           </div>
 
           {/* cast */}
-          <div className="mx-5 md:mx-16 md:my-20">
-            <h1 className="bg-white w-60 px-4 py-2 border-4 border-green-500  rounded-full my-6 text-xl uppercase text-green-600 font-bold">
+          <div className="mx-8 md:mx-16 md:my-20">
+            <h1 className=" w-60 px-4 py-2 border-4 border-green-500  rounded-full my-6 text-xl uppercase font-bold">
               CAST AND CREW
             </h1>
             <div className="flex space-x-6 overflow-x-scroll p-2 -m-2 scrollbar-thin scrollbar-thumb-black scroll">

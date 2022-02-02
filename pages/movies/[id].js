@@ -55,7 +55,9 @@ const movieId = ({ details, cast, similar, video }) => {
           <img
             src={
               details
-                ? setImage.originalImage(details.backdrop_path)
+                ? details.backdrop_path === null
+                  ? "/gallary.jpg"
+                  : setImage.originalImage(details.backdrop_path)
                 : "/gallary.jpg"
             }
             className="w-full max-h-screen"
