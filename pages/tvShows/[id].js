@@ -71,7 +71,7 @@ const movieId = ({ details, cast, similar, video }) => {
       </div>
 
       <div className="my-3 md:my-0 mx-8 md:p-8 md:mx-0 md:bg-black">
-        <h1 className="w-40 px-4 py-2 border-4 border-green-500  rounded-full my-6 text-xl uppercase font-bold">
+        <h1 className="w-36 px-4 py-2 border-4 border-green-500  rounded-full my-6 text-xl uppercase font-bold">
           Seasons
         </h1>
         <div className="md:grid md:grid-cols-2">

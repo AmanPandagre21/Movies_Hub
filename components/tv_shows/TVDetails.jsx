@@ -2,15 +2,19 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import CastandCrew from "../movies/CastandCrew";
 import { setImage, setYTLink } from "../../pages/api/apiconfig";
+import { PlayIcon } from "@heroicons/react/solid";
 
 const TVDetails = ({ details, cast, trailer }) => {
-  const [trail, setTrailer] = useState([]);
   const router = useRouter();
-  // useEffect(() => {
-  //   setTrailer((prev) => {
-  //     return trailer.filter((fil) => fil.type === "Trailer");
-  //   });
-  // }, [setTrailer]);
+
+  const [trail, setTrailer] = useState([]);
+
+  useEffect(() => {
+    trailer &&
+      setTrailer((prev) => {
+        return trailer.filter((fil) => fil.type === "Trailer");
+      });
+  }, [setTrailer]);
   return (
     <>
       {(details && cast && trailer && (
@@ -24,13 +28,18 @@ const TVDetails = ({ details, cast, trailer }) => {
                   className="w-full h-4/4 rounded"
                 ></img>
                 <div className="bg-green-900 hover:ring-white hover:bg-green-600 flex justify-center items-center">
-                  <a
-                    href={setYTLink.link(trail[0])}
-                    target="_blank"
-                    className="text-lg uppercase font-semibold py-2"
-                  >
-                    Watch Trailer
-                  </a>
+                  {trail.slice(0, 1).map((ele) => {
+                    return (
+                      <a
+                        href={setYTLink.link(ele.key)}
+                        target="_blank"
+                        className="text-lg uppercase font-semibold py-2"
+                        key={ele.id}
+                      >
+                        Watch Trailer
+                      </a>
+                    );
+                  })}
                 </div>
               </div>
               {/* Movie Details */}
@@ -42,6 +51,27 @@ const TVDetails = ({ details, cast, trailer }) => {
                 <h2 className="my-5 font-bold italic text-xl text-yellow-400">
                   {details.tagline}...
                 </h2>
+
+                {/* phone section trailer*/}
+
+                {trail.slice(0, 1).map((t) => {
+                  return (
+                    <div
+                      className="md:hidden flex justify-center items-center my-8 text-xl"
+                      key={t.id}
+                    >
+                      <PlayIcon className="w-8 mx-2" />
+                      <a
+                        href={setYTLink.link(t.key)}
+                        className="cursor-pointer"
+                        target="_blank"
+                      >
+                        PLay Trailer
+                      </a>
+                    </div>
+                  );
+                })}
+
                 {/* description */}
                 <div className="mt-3 md:mt-2">
                   <h1 className="mb-3 text-xl text-green-500 capitalize font-bold">
@@ -114,7 +144,7 @@ const TVDetails = ({ details, cast, trailer }) => {
 
           {/* cast */}
           <div className="mx-8 md:mx-16 md:my-16">
-            <h1 className=" w-60 px-4 py-2 border-4 border-green-500  rounded-full my-6 text-xl uppercase font-bold">
+            <h1 className="w-52 px-4 py-2 border-4 border-green-500  rounded-full my-6 text-xl uppercase font-bold">
               CAST AND CREW
             </h1>
             <div className="flex space-x-6 overflow-x-scroll p-2 -m-2 scrollbar-thin scrollbar-thumb-black scroll">
