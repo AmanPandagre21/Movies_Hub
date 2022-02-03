@@ -22,8 +22,8 @@ const Home = ({ trendingMovies, topRatedMovies, trendingTv, topRatedTv }) => {
           className="w-full max-h-screen md:h-96 opacity-20"
         ></img>
         <div className="absolute inset-x-[3%] bottom-1/4 md:inset-x-[26%] md:bottom-1/4">
-          <h1 className="uppercase text-4xl md:text-8xl text-green-600 font-bold text-center">
-            MOvies <span className="text-white">Hub</span>
+          <h1 className="uppercase text-4xl md:text-7xl text-green-600 font-bold text-center">
+            MOvies <span className="text-white">Tuple</span>
           </h1>
           <p className="my-2 px-4 md:px-0 text-sm md:text-lg font-semibold text-white capitalize text-center">
             A place where you can find information about moves and popular web

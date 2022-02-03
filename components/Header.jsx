@@ -15,7 +15,7 @@ const Header = () => {
               <Image src="/logo.png" width={80} height={50} />
             </Link>
             <h1 className="text-white uppercase font-semibold text-xl">
-              <Link href="/">Movies Hub</Link>
+              <Link href="/">Movies Tuple</Link>
             </h1>
           </div>
 
